@@ -22,6 +22,9 @@ const GlobalSyles = createGlobalStyle(() => (
             border: "0px",
             margin: "0px",
         },
+        body:{
+            backgroundColor: "#1d3845"
+        },
         "#root": {
             ...windowSizes,
         }

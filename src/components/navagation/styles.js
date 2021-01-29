@@ -4,10 +4,12 @@ import { breakPoint } from "components/globalStyles"
 export const NavagationWrapper = Styled.div(() => ({
     width: "100%",
     height: 60,
-    backgroundColor: "grey",
+    backgroundColor: "#454545",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    color: "white",
+    filter: "drop-shadow(2px 0px 2px #000)",
 }))
 
 export const NavButton = Styled.div(() => ({
@@ -23,5 +25,5 @@ export const NavButtonWrapper = Styled.div(() => ({
 }))
 
 export const Logo = Styled.img(() => ({
-    height: "100%"
+    height: "80%"
 }))
