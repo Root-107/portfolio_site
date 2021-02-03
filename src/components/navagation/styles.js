@@ -27,3 +27,7 @@ export const NavButtonWrapper = Styled.div(() => ({
 export const Logo = Styled.img(() => ({
     height: "80%"
 }))
+
+export const Header = Styled.h2(() => ({
+    margin: "auto 0 auto auto"
+}))

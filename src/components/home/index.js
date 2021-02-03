@@ -1,7 +1,13 @@
-import { Picture } from "./styles"
+import { Picture, Banner } from "./styles"
 
 const Home = () => <>
-    <Picture src="/assets/icon.jpg" />
+    <Banner>
+        <Picture src="/assets/icon.jpg" />
+        <div>
+            <h1>Sam Pugh</h1>
+            <h2>{`{ Software Developer }`}</h2>
+        </div>
+    </Banner>
 </>
 
 export default Home

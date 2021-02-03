@@ -1,5 +1,11 @@
 import { useHistory } from "react-router-dom"
-import  { NavagationWrapper, NavButton, Logo, NavButtonWrapper } from "./styles"
+import  { 
+    NavagationWrapper,
+    NavButton,
+    Logo,
+    NavButtonWrapper,
+    Header
+} from "./styles"
 
 // Menu items
 
@@ -11,13 +17,8 @@ const menu = [
     },
     {
         id: 2,
-        route: "/unity",
-        name: "Unity"
-    },
-    {
-        id: 3,
-        route: "/3js",
-        name: "3JS"
+        route: "/mywork",
+        name: "My Work"
     },
     {
         id: 3,
@@ -32,7 +33,7 @@ const Navagation = () => {
         <NavButtonWrapper>
             <Logo src="/assets/Logo_New.png" alt="logo" />
             {menu.map(item =>
-                <NavButton item={item}
+                <NavButton key={item.id} item={item}
                     onClick={() => {
                         history.push(item.route || "/")
                     }}
@@ -40,6 +41,7 @@ const Navagation = () => {
                     {item.name}
                 </NavButton>
             )}
+            <Header>JustBadCode</Header>
         </NavButtonWrapper>
     </NavagationWrapper>
 }
