@@ -1,7 +1,6 @@
 import Styled from "styled-components"
 
 export const FilterWrapper = Styled.div(() => ({
-    backgroundColor: "red",
     display: "flex"
 }))
 

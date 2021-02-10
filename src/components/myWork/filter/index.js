@@ -14,8 +14,14 @@ const Filter = props => {
                     type: Actions.SET_FILTER,
                     value: item.filter
                 })
-            }} key={item.id}>{item.filter}</FilterItem>
+            }} key={item.id}>{item.lable}</FilterItem>
         })}
+        <FilterItem onClick={() => {
+                dispatch({
+                    type: Actions.SET_FILTER,
+                    value: ""
+                })
+            }}>Clear filter</FilterItem>
     </FilterWrapper>
 }
 

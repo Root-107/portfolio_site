@@ -5,15 +5,28 @@ import Work from "./work"
 const items = [
     {
         id: 1,
-        filter: "Unity"
+        lable: "Unity",
+        filter: "unity"
     },
     {
         id: 2,
-        filter: "React"
+        lable: "React",
+        filter: "react"
     },
     {
         id: 3,
-        filter: "3JS"
+        lable: "3JS",
+        filter: "3js"
+    },
+    {
+        id: 4,
+        lable: "UE4",
+        filter: "unreal"
+    },
+    {
+        id: 4,
+        lable: "3D",
+        filter: "3d"
     },
 ]
 
@@ -21,12 +34,38 @@ const work = [
     {
         id: 1,
         title: "Item 1",
-        filters: ["3JS", "React"],
+        filters: ["3js", "react"],
     },
     {   
         id: 2,
         title: "Item 2",
-        filters: ["Unity"],
+        filters: ["unity"],
+        asset: {
+            type: "LINK",
+            url: "https://www.youtube.com/watch?v=G_Hth8q_G2w",
+            thumb: "Shader_Unity.png"
+        }
+    },
+    {   
+        id: 3,
+        title: "Item 2",
+        filters: ["unreal", "3d"],
+        asset: {
+            type: "LINK",
+            url: "https://www.artstation.com/artwork/LwN1v",
+            thumb: "3d_enviroment_rocks.jpg"
+        },
+    },
+    {   
+        id: 4,
+        title: "Item 2",
+        filters: ["unity"],
+        asset: {
+            type: "LINK",
+            url: "https://youtu.be/0QQqFFE9SOw",
+            thumb: "bunnys.png"
+        },
+        github: "https://github.com/Root-107/Shader_Development"
     }
 ]
 
