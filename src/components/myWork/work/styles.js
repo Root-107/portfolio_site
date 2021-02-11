@@ -34,3 +34,11 @@ export const GitHub = Styled.div(() => ({
     right: "10px",
     bottom: "10px"
 }))
+
+export const Title = Styled.div(() => ({
+    position:"absolute",
+    width: "100%",
+    backgroundColor: "#777",
+    bottom: "0px",
+    paddingLeft: "20px"
+}))

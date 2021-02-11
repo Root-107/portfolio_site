@@ -1,7 +1,13 @@
 import PropTypes from "prop-types"
 import AppContext from "context/AppContext"
 import { useContext} from "react"
-import { PortfolioItem, MyWorkWrapper, ThumbImage, GitHub } from "./styles"
+import {
+    PortfolioItem,
+    MyWorkWrapper,
+    ThumbImage,
+    GitHub,
+    Title
+} from "./styles"
 
 const Work = props => {
     const { items } = props
@@ -14,6 +20,7 @@ const Work = props => {
                     window.open(item.asset.url, "_blank")
             }}>
                 <ThumbImage src={`/assets/${item.asset?.thumb}`} alt="thumb"/>
+                <Title>{item.title}</Title>
                 {item.github? <GitHub onClick={() => {
                         window.open(item.github, "_blank")
                 }} /> : null}

@@ -66,6 +66,26 @@ const work = [
             thumb: "bunnys.png"
         },
         github: "https://github.com/Root-107/Shader_Development"
+    },
+    {   
+        id: 4,
+        title: "Item 2",
+        filters: ["unity"],
+        asset: {
+            type: "LINK",
+            url: "https://youtu.be/zBOKaYRIY8Y",
+            thumb: ""
+        },
+    },
+    {
+        id: 4,
+        title: "Item 2",
+        filters: ["react"],
+        asset: {
+            type: "LINK",
+            thumb: ""
+        },
+        github: "https://github.com/Root-107/portfolio_site"
     }
 ]
 

@@ -1,7 +1,8 @@
 import Styled from "styled-components"
 
 export const FilterWrapper = Styled.div(() => ({
-    display: "flex"
+    display: "flex",
+    flexWrap: "wrap"
 }))
 
 export const FilterItem = Styled.div(() => ({
