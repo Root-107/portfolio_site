@@ -1,15 +1,22 @@
 import Styled from "styled-components"
-import { breakPoint } from "components/globalStyles"
+import { breakPoint, colours } from "components/globalStyles"
 
-export const NavagationWrapper = Styled.div(() => ({
+const menuHeight = 60
+
+export const NavagationWrapper = Styled.div(({visible}) => ({
     width: "100%",
-    height: 60,
-    backgroundColor: "#454545",
+    height: menuHeight,
+    backgroundColor: colours.darkGrey,
     display: "flex",
+    transition: "top 0.3s",
     alignItems: "center",
     justifyContent: "center",
     color: "white",
     filter: "drop-shadow(2px 0px 2px #000)",
+    position: "fixed",
+    top: visible? 0 : `-${menuHeight}px`,
+    overflow: "hidden",
+    zIndex: 10
 }))
 
 export const NavButton = Styled.div(() => ({

@@ -8,20 +8,20 @@ const Filter = props => {
     const { items } = props
     const { dispatch } = useContext(AppContext)
     return <FilterWrapper>
-        {items.map(item => {
-            return <FilterItem onClick={() => {
-                dispatch({
-                    type: Actions.SET_FILTER,
-                    value: item.filter
-                })
-            }} key={item.id}>{item.lable}</FilterItem>
-        })}
         <FilterItem onClick={() => {
                 dispatch({
                     type: Actions.SET_FILTER,
                     value: ""
                 })
             }}>Clear filter</FilterItem>
+        {items.map(item => {
+            return <FilterItem onClick={() => {
+                dispatch({
+                    type: Actions.SET_FILTER,
+                    value: item.lable
+                })
+            }} key={item.id}>{item.lable}</FilterItem>
+        })}
     </FilterWrapper>
 }
 

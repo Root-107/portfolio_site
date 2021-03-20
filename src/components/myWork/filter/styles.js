@@ -5,11 +5,12 @@ export const FilterWrapper = Styled.div(() => ({
     flexWrap: "wrap"
 }))
 
-export const FilterItem = Styled.div(() => ({
-    backgroundColor: "grey",
+export const FilterItem = Styled.button(() => ({
     color: "white",
+    backgroundColor: "Transparent",
     margin: "10px",
-    padding: "5px",
-    border: "1px solid black",
-    cursor: "pointer"
+    border: "1px solid white",
+    cursor: "pointer",
+    borderRadius: "4px",
+    padding: ".5rem 1rem"
 }))

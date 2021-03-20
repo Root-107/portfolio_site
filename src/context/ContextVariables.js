@@ -3,7 +3,8 @@ export const Actions = Object.freeze({
 })
 
 export const initialState = {
-    filter: "" 
+    filter: "",
+    logo: ""
 }
 
 export const reducer = (state, action) => {

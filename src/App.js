@@ -1,20 +1,34 @@
-import { Switch, Route } from "react-router-dom"
+import { useEffect, useState } from "react"
 import Home from "components/home"
 import MyWork from "components/myWork"
 import AboutMe from "components/aboutme"
 import Navagation from "components/navagation"
 import GlobalSyles, { PageWrapper } from "components/globalStyles"
 
-const App = () => <div className="app">
-	<GlobalSyles />
-	<Navagation />
-	<PageWrapper>
-		<Switch>
-			<Route exact path="/" render={Home} />
-			<Route exact path="/aboutme" render={AboutMe} />
-			<Route exact path="/mywork" render={MyWork} />
-		</Switch>
-	</PageWrapper>
-</div>
+const App = () => {
+	const [scrolePos, setScrolePos] = useState(0)
+
+    const handleScroll = () => {
+        setScrolePos(window.pageYOffset)
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll, {passive: true})
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }, [])
+
+	return <div className="app">
+		<GlobalSyles />
+		<Navagation visible={scrolePos === 0} />
+		<PageWrapper>
+			<Home />
+			<AboutMe />
+			<MyWork />
+		</PageWrapper>
+	</div>
+}
+
 
 export default App

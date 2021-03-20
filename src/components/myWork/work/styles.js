@@ -1,44 +1,53 @@
 import Styled from "styled-components"
-import { relative } from "upath"
+import { colours } from "components/globalStyles"
 
 export const PortfolioItem = Styled.div(() => ({
-    cursor: "pointer",
-    background: "#666",
-    borderRadius: "1rem",
+    background: colours.backgroundContrastBlue,
     display: "flex",
-    justifyContent: "center",
-    overflow: "hidden",
-    position:"relative"
+    flexDirection: "column",
+    color: colours.offWhite,
+    padding: "2rem 1.75rem",
+    boxShadow: `0 10px 10px -15px black`,
+    h2: {
+        fontSize: "22px",
+        margin: "0px 0px 10px"
+    },
+    p:{
+        fontSize: "17px"
+    }
+}))
+
+export const Links = Styled.div(() => ({
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-end",
+    margin: "0px 0px 20px"
 }))
 
 export const MyWorkWrapper = Styled.div(props => ({
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(min(300px, 100%), 1fr))",
-    gridGap: "1rem",
-}))
-
-export const ThumbImage = Styled.img(() => ({
-    width: "100%"
-}))
-
-export const GitHub = Styled.div(() => ({
-    cursor: "pointer",
-    backgroundColor: "#111",
-    borderRadius: "50px",
-    border: "solid 3px #111",
-    width: "50px",
-    height: "50px",
-    position: "absolute",
-    backgroundImage: `url("/assets/GitHub-Mark-Light-120px-plus.png")`,
-    backgroundSize: "contain",
-    right: "10px",
-    bottom: "10px"
-}))
-
-export const Title = Styled.div(() => ({
-    position:"absolute",
     width: "100%",
-    backgroundColor: "#777",
-    bottom: "0px",
-    paddingLeft: "20px"
+    display: "flex",
+    flexDirection: "column"
+}))
+
+export const MyWorkGrid = Styled.div(props => ({
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+    gap: "15px",
+    height: "100%"
+}))
+
+export const Footer = Styled.div(() => ({
+    ul: {
+    display: "flex",
+    alignItems: "flex-end",
+    flexGrow: 1,
+    flexWrap: "wrap",
+    padding: "0px",
+    margin: "25px 0px 0px",
+    listStyle: "none"
+    },
+    li:{
+        marginRight: "10px"
+    }
 }))

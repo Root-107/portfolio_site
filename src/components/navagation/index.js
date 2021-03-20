@@ -18,7 +18,7 @@ const menu = [
     {
         id: 2,
         route: "/mywork",
-        name: "My Work"
+        name: "Work & Skills"
     },
     {
         id: 3,
@@ -27,9 +27,9 @@ const menu = [
     }
 ]
 
-const Navagation = () => {
+const Navagation = ({visible}) => {
     const history = useHistory()
-    return <NavagationWrapper>
+    return <NavagationWrapper visible={visible}>
         <NavButtonWrapper>
             <Logo src="/assets/Logo_New.png" alt="logo" />
             {menu.map(item =>

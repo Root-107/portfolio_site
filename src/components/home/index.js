@@ -1,11 +1,12 @@
-import { Picture, Banner } from "./styles"
+import { Banner } from "./styles"
 
 const Home = () => <>
     <Banner>
-        <Picture src="/assets/icon.jpg" />
         <div>
+            <p>Hey, my name is </p>
             <h1>Sam Pugh</h1>
-            <h2>{`{ Software Developer }`}</h2>
+            <h2>I creature software solutions</h2>
+            <p>I'm a software developer based in Cheltnham, I specialise in </p>
         </div>
     </Banner>
 </>
