@@ -1,5 +1,6 @@
 import Filter from "./filter"
 import Work from "./work"
+import Section from "components/reusable/section"
 
 const items = [
     {
@@ -81,12 +82,22 @@ const work = [
             type: "LINK"
         },
         git: "https://git.com/Root-107/portfolio_site"
+    },
+    {
+        id: 7,
+        title: "Creating portfolio site in React",
+        filters: ["React"],
+        description: "Creation of this portfolio site.",
+        asset: {
+            type: "LINK"
+        },
+        git: "https://git.com/Root-107/portfolio_site"
     }
 ]
 
-const MyWork = () => <>
+const MyWork = () => <div id="work">
     <Filter items={items} />
     <Work items={work} />
-</>
+</div>
 
 export default MyWork

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Experience from "components/experience"
 import Home from "components/home"
 import MyWork from "components/myWork"
 import AboutMe from "components/aboutme"
@@ -25,6 +26,7 @@ const App = () => {
 		<PageWrapper>
 			<Home />
 			<AboutMe />
+			<Experience />
 			<MyWork />
 		</PageWrapper>
 	</div>

@@ -2,7 +2,7 @@ import { Banner } from "./styles"
 
 const Home = () => <>
     <Banner>
-        <div>
+        <div id = "home">
             <p>Hey, my name is </p>
             <h1>Sam Pugh</h1>
             <h2>I creature software solutions</h2>

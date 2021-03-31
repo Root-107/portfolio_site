@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom"
+import { Link } from "react-scroll"
 import  { 
     NavagationWrapper,
     NavButton,
@@ -13,33 +13,37 @@ const menu = [
     {
         id: 1,
         route: "/",
-        name: "Home"
+        name: "Home",
+        to: "home"
     },
     {
         id: 2,
         route: "/mywork",
-        name: "Work & Skills"
+        name: "Work & Skills",
+        to: "work"
     },
     {
         id: 3,
         route: "/aboutme",
-        name: "About Me"
+        name: "About Me",
+        to: "about"
     }
 ]
 
 const Navagation = ({visible}) => {
-    const history = useHistory()
     return <NavagationWrapper visible={visible}>
         <NavButtonWrapper>
             <Logo src="/assets/Logo_New.png" alt="logo" />
             {menu.map(item =>
-                <NavButton key={item.id} item={item}
-                    onClick={() => {
-                        history.push(item.route || "/")
-                    }}
+                <Link
+                    to={item.to}
+                    smooth={true}
+                    spy={true}
                 >
-                    {item.name}
-                </NavButton>
+                    <NavButton key={item.id} item={item}>
+                        {item.name}
+                    </NavButton>
+                </Link>
             )}
             <Header>JustBadCode</Header>
         </NavButtonWrapper>

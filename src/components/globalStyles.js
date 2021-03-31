@@ -2,7 +2,7 @@ import Styled, { createGlobalStyle } from "styled-components"
 
 export const breakPoint = {
     maxWidth: "1000px",
-    minWidth: "300px"
+    minWidth: "0px"
 }
 
 const windowSizes = {
