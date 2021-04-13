@@ -8,9 +8,8 @@ const AboutMe = () => <Section>
         <SectionWrapper>
             <div>
                 <p>Hey, I'm Sam, a Software developer.</p>
-                <p>_SOMETHING ABOUT WHY PROGRAMMER_</p>
-                <p>_LITTLE ABOUT STUFF_</p>
-                <p>_MY BEST LANGUAGES_</p>
+                <p>Prgramming gives me the satisfaction of porblem solving along we creativity</p>
+                <p>I've worked on a variaty of projects for a variaty of clinets.</p>
             </div>
             <ImageContainer>
                 <Picture src="/assets/icon.jpg" />
